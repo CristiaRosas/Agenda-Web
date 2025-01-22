@@ -1,25 +1,16 @@
-body{
-    background-color: #0077b6;
+body {
+    background-color: #FFD700;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.regresar{
+.regresar {
     cursor: pointer;
+    margin: 20px;
 }
 
-.encabezados{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: left;
-    padding-bottom: 10px;
-    border-bottom: 2px solid red;
-}
-
-.lista{
+.lista-favoritos {
     width: 80%;
     margin: 30px auto;
     background-color: white;
@@ -28,9 +19,10 @@ body{
     padding: 20px;
 }
 
-.h2{
+h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #000000;
 }
 
 ul {
@@ -38,81 +30,79 @@ ul {
     padding: 0;
 }
 
-.contacto {
+li {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     padding: 15px;
-    border-bottom: 1px solid red;
     align-items: center;
 }
 
-.contacto:last-child {
+li:last-child {
     border-bottom: none;
 }
 
-.contacto:hover{
-    background-color: #d3f70a;
+li:hover {
+    background-color: #f7e70a;
 }
 
-.contacto a{
+li a {
     text-decoration: none;
     color: inherit;
     display: contents;
-    width: 100%;
 }
 
-.nombre{
+.nombre {
     font-weight: bold;
-    margin-right: 10px;
-    flex: 1;
+    color: #ff3c00;
+    border-bottom: 1px solid red
 }
 
 .email, 
 .telefono {
     color: #1411b8;
+    border-bottom: 1px solid red
 }
 
-.contacto:hover .nombre{
+li:hover .nombre {
     color: #ff3c00;
 }
 
-.botones{
+.botones {
     display: flex;
-    justify-content: center; 
-    gap: 50px; 
+    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
 }
 
 .botones-imagen {
     display: inline-block;
-    width: 50px; 
-    height: 50px; 
-    margin: 10px; 
-    cursor: pointer; 
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .botones-imagen:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-
-.botones {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    gap: 20px; 
-    padding: 20px; 
-}
-
 
 @media (max-width: 600px) {
     .botones-imagen {
-        width: 40px; 
+        width: 40px;
         height: 40px;
     }
+
     .botones {
-        gap: 10px; 
+        gap: 10px;
+    }
+
+    .lista-favoritos {
+        width: 90%;
+    }
+
+    li {
+        grid-template-columns: 1fr 1fr;
     }
 }

@@ -8,7 +8,7 @@ body {
 .contact-details {
     width: 80%;
     margin: 30px auto;
-    background-color: rgb(165, 168, 201);
+    background-color: white;
     border-radius: 8px;
     padding: 20px;
 }
@@ -41,10 +41,9 @@ li span {
 }
 
 li:hover {
-    background-color: #959b7f;
+    background-color: #d3f70a;
 }
 
-/* Estilo para las tarjetas */
 .contact-card {
     background-color: #fff;
     border-radius: 8px;

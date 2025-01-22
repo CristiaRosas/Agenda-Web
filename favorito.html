@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos</title>
+    <link rel="stylesheet" href="/assets/styleContacFav.css">
+
+</head>
+<body>
+    <div class="regresar">
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <a class="navbar-brand" href="contactos.html">
+                <img src="/assets/img/regresar.png" alt="Regresar" style="width: 30px; height: auto; vertical-align: middle;">
+            </a>
+        </nav>
+    </div>
+    <div class="lista-favoritos">
+        <h2>Favoritos</h2>
+        <ul id="favoritos-lista">
+        </ul>
+    </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactosFavoritos = [
+            { id: 'PeraltaMartinez', nombre: 'Peralta Martinez', email: 'pepa@gmail.com', telefono: '4788 - 8041' },
+            { id: 'JonathanAlvarez', nombre: 'Jonathan Alvarez', email: 'jonas@gmail.com', telefono: '5131 - 6646' },
+            { id: 'DarwinMijangos', nombre: 'Darwin Mijangos', email: 'mortadela@gmail.com', telefono: '3612 - 2557' }
+        ];
+    
+        const listaFavoritos = document.getElementById('favoritos-lista');
+
+        if (contactosFavoritos.length === 0) {
+            listaFavoritos.innerHTML = '<p>No tienes contactos favoritos.</p>';
+        } else {
+            contactosFavoritos.forEach(contacto => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <a href="detalle.html?contacto=${contacto.id}">
+                        <span class="nombre">${contacto.nombre}</span>
+                        <span class="email">${contacto.email}</span>
+                        <span class="telefono">${contacto.telefono}</span>
+                    </a>
+                `;
+                listaFavoritos.appendChild(li);
+            });
+        }
+    });
+    </script>
+</body>
+</html>
