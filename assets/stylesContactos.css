@@ -117,26 +117,22 @@ ul {
     }
 }
 
-/* Añadir esto a tu archivo de estilos */
-
-.contacto {
-    display: flex;
-    justify-content: space-between; /* Alinea el nombre a la izquierda y el botón a la derecha */
-    align-items: center; /* Asegura que el contenido esté centrado verticalmente */
-    margin-bottom: 10px; /* Opcional, para separar los contactos */
-}
-
 .contacto-info {
     display: flex;
-    flex-direction: column; /* Organiza el nombre, email y teléfono en una columna */
+    flex-direction: column; 
+    flex-grow: 1; 
 }
 
 .favorito {
     background: none;
     border: none;
-    font-size: 20px; /* Tamaño del corazón */
+    font-size: 20px; 
     cursor: pointer;
     padding: 0;
-    margin-left: 10px; /* Separación entre el contenido y el corazón */
+    margin-left: 10px; 
+}
+
+.favorito:hover {
+    color: red; 
 }
 
