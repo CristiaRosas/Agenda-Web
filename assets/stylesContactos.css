@@ -1,0 +1,116 @@
+body{
+    background-color: #0077b6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.encabezados{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 2px solid red;
+}
+
+.lista{
+    width: 80%;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 15px;
+    border-bottom: 1px solid red;
+    align-items: center;
+}
+
+.contacto:last-child {
+    border-bottom: none;
+}
+
+.contacto:hover{
+    background-color: #d3f70a;
+}
+
+.contacto a{
+    text-decoration: none;
+    color: inherit;
+    display: contents;
+    width: 100%;
+}
+
+.nombre{
+    font-weight: bold;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.email, 
+.telefono {
+    color: #1411b8;
+}
+
+.contacto:hover .nombre{
+    color: #ff3c00;
+}
+
+.botones{
+    display: flex;
+    justify-content: center; 
+    gap: 50px; 
+    margin-top: 20px;
+}
+
+.botones-agendaAgr{
+    padding: 10px;
+    background-color: #69f50c; 
+    color: #000000; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.botones-agendaFav{
+    padding: 10px;
+    background-color: #d9ff00; 
+    color: #080808; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.botones-agendaLis{
+    padding: 10px;
+    background-color: #0077ff; 
+    color: #000000; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+}
