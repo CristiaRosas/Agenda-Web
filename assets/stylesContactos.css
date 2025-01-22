@@ -5,6 +5,10 @@ body{
     padding: 0;
 }
 
+.regresar{
+    cursor: pointer;
+}
+
 .encabezados{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -113,4 +117,38 @@ ul {
     font-weight: bold;
     cursor: pointer;
     margin-left: 5px;
+}
+
+.botones-imagen {
+    display: inline-block;
+    width: 50px; 
+    height: 50px; 
+    margin: 10px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botones-imagen:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.botones {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+
+@media (max-width: 600px) {
+    .botones-imagen {
+        width: 40px; 
+        height: 40px;
+    }
+    .botones {
+        gap: 10px; 
+    }
 }
