@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Contacto</title>
+    <link rel="stylesheet" href="/assets/styleDetalle.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <a class="navbar-brand" href="contactos.html">
+            <img src="/assets/img/regresar.png" alt="Regresar" style="width: 30px; height: auto; vertical-align: middle;">
+        </a>
+    </nav>
+    <div class="contact-details">
+        <h1>Detalles del Contacto</h1>
+        <ul id="details-list"></ul>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const contacto = params.get('contacto');
+
+        const contactos = {
+            PeraltaMartinez: { Nombre: "Peralta Martinez", Email: "pepa@gmail.com", Teléfono: "4788 - 8041" },
+            KevinReyes: { Nombre: "Kevin Reyes", Email: "kev@gmail.com", Teléfono: "3192 - 4067" },
+            JonathanAlvarez: { Nombre: "Jonathan Alvarez", Email: "jonas@gmail.com", Teléfono: "5131 - 6646" },
+            AndrilAguilar: { Nombre: "Andril Aguilar", Email: "mandril@gmail.com", Teléfono: "3943 - 3740" },
+            DarwinMijangos: { Nombre: "Darwin Mijangos", Email: "mortadela@gmail.com", Teléfono: "3612 - 2557" },
+        };
+
+        const detailsList = document.getElementById('details-list');
+        if (contacto && contactos[contacto]) {
+            for (const [key, value] of Object.entries(contactos[contacto])) {
+                const li = document.createElement('li');
+                li.textContent = `${key}: ${value}`;
+                detailsList.appendChild(li);
+            }
+        } else {
+            detailsList.innerHTML = "<li>Contacto no encontrado.</li>";
+        }
+    </script>
+</body>
+</html>
