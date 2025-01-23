@@ -5,6 +5,15 @@ body {
     padding: 0;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .contact-details {
     width: 80%;
     margin: 30px auto;
@@ -42,6 +51,7 @@ li span {
 
 li:hover {
     background-color: #d3f70a;
+    transition: background-color 0.3s ease;
 }
 
 .contact-card {

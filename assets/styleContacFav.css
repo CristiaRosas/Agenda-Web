@@ -5,6 +5,15 @@ body {
     padding: 0;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .regresar {
     cursor: pointer;
     margin: 20px;
@@ -49,6 +58,7 @@ li:last-child {
 
 li:hover {
     background-color: #f7e70a;
+    transition: background-color 0.3s ease;
 }
 
 li a {
@@ -59,56 +69,16 @@ li a {
 
 .nombre {
     font-weight: bold;
-    color: #ff3c00;
+    color: #020202;
     border-bottom: 1px solid red
 }
 
 .email, 
 .telefono {
     color: #1411b8;
-    border-bottom: 1px solid red
+    border-bottom: 1px solid rgb(255, 2, 2)
 }
 
 li:hover .nombre {
-    color: #ff3c00;
-}
-
-.botones {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.botones-imagen {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.botones-imagen:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 600px) {
-    .botones-imagen {
-        width: 40px;
-        height: 40px;
-    }
-
-    .botones {
-        gap: 10px;
-    }
-
-    .lista-favoritos {
-        width: 90%;
-    }
-
-    li {
-        grid-template-columns: 1fr 1fr;
-    }
+    color: #000000;
 }

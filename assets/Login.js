@@ -1,11 +1,19 @@
-document.getElementById('boton').addEventListener('click', function() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('contra').value;
+const credenciales = {
+    correoValido: "crosas-2023500@kinal.edu.gt",
+    contraValida: "12345"
+};
 
-    if (email && password) {
-        // Aquí puedes validar las credenciales si es necesario
-        window.location.href = '/contactos.html'; // Redirige a la página de contactos
-    } else {
-        document.getElementById('error').textContent = 'Por favor, complete todos los campos.';
-    }
-});
+    const boton = document.getElementById("boton");
+    const error = document.getElementById("error");
+
+    boton.addEventListener("click", () => {
+        const correo = document.getElementById("email").value.trim();
+        const contra = document.getElementById("contra").value.trim();
+        const contraInput = document.getElementById("contra");
+
+        (correo === credenciales.correoValido && contra === credenciales.contraValida) 
+        ?   window.location.href = "/contactos.html"
+        :  error.textContent = "Correo o contraseña incorrecta.";
+        contraInput.value="";
+        
+    });
