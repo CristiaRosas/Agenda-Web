@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lista de tareas</title>
+    <link rel="stylesheet" href="/assets/styleTareas.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <a class="navbar-brand" href="contactos.html">
+            <img src="/assets/img/regresar.png" alt="Regresar" style="width: 30px; height: auto; vertical-align: middle;">
+        </a>
+    </nav>
+    <h1>Lista de tareas</h1>
+    <label for="tareaInput"> Ingresa tu nueva tarea</label>
+    <div class="contendeor">
+        <input type="text" id="tareaInput" placeholder="Nueva tarea">
+        <select id="prioridad">
+            <option value="urgente">Urgente</option>
+            <option value="normal">Normal</option>
+        </select>
+            
+    </div>
+    <ul id="listaT">
+
+    </ul>
+    <a type="button" id="botonRegresar"></a>
+    <script src="../assets/listaTareas.js"></script>
+    <button type="button" id="agregarTa">Agregar</button>
+</body>
+</html>
