@@ -5,10 +5,9 @@ body {
     padding: 0;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Asegura separación entre elementos */
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
     background-color: #ffffff;
@@ -22,13 +21,13 @@ body {
     cursor: pointer;
 }
 
-/* Botón regresar */
+
 .regresar {
     padding: 20px;
     cursor: pointer;
 }
 
-/* Formulario */
+
 .formulario {
     background-color: #2c4d74;
     margin: 20px auto;
@@ -64,7 +63,6 @@ input[type="tel"] {
     text-align: center;
 }
 
-/* Botones */
 .botones {
     display: flex;
     justify-content: space-between;
@@ -94,7 +92,6 @@ input[type="tel"] {
     background-color: #da190b;
 }
 
-/* Validación de campos */
 input:required {
     border: 1px solid #f44336;
 }
